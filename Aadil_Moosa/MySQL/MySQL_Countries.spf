@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>world</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>7950118174163435652</string>
+			<key>name</key>
+			<string>localhost:3306</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJX
+			TlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAF
+			gAdUdHlwZVRyb3dzXxAdU2VsZWN0aW9uRGV0YWlsVHlwZU5TSW5k
+			ZXhTZXTSFwsYGVxOU1JhbmdlQ291bnQQAIAG0hscHR5aJGNsYXNz
+			bmFtZVgkY2xhc3Nlc1pOU0luZGV4U2V0oh8gWk5TSW5kZXhTZXRY
+			TlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVk
+			QXJjaGl2ZXLRJidUZGF0YYABAAgAEQAaACMALQAyADcAQABGAE0A
+			VQBgAGcAagBsAG4AcQBzAHUAdwB8AIEAoQCmALMAtQC3ALwAxwDQ
+			ANsA3gDpAPIA9wEEAQcBGQEcASEAAAAAAAACAQAAAAAAAAAoAAAA
+			AAAAAAAAAAAAAAABIw==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {694, 450}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>SELECT countries.name, languages.language, languages.percentage FROM countries
+LEFT JOIN languages ON countries.id = languages.country_id WHERE language="Slovene" 
+ORDER BY percentage DESC;
+
+SELECT countries.name, COUNT(cities.name) AS cities FROM countries
+LEFT JOIN cities ON countries.id = cities.country_id GROUP BY countries.name 
+ORDER BY COUNT(*) DESC;
+
+SELECT cities.name AS city, cities.population FROM countries
+LEFT JOIN cities ON countries.id = cities.country_id WHERE countries.name = "Mexico" AND cities.population &gt; 500000
+ORDER BY cities.population DESC;
+
+SELECT countries.name AS country, languages.language, languages.percentage FROM countries 
+LEFT JOIN languages ON countries.id = languages.country_id WHERE languages.percentage &gt; 89
+ORDER BY languages.percentage DESC;
+
+SELECT countries.name, surface_area, population FROM countries WHERE surface_area &lt; 501 AND population &gt; 100000;
+
+SELECT countries.name, life_expectancy, capital, government_form FROM countries WHERE life_expectancy &gt; 75 AND capital &gt; 200 AND government_form = "Constitutional Monarchy";
+
+SELECT countries.name, cities.name AS city, cities.district, cities.population FROM countries 
+LEFT JOIN cities ON countries.id = cities.country_id WHERE countries.name = "Argentina" AND cities.population &gt; 500000 AND cities.district = "Buenos Aires";
+
+SELECT region, COUNT(name) AS countries FROM countries GROUP BY region 
+ORDER BY COUNT(*) DESC;
+</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>214</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>SELECT countries.name, life_expectancy, capital, government_form FROM countries WHERE life_expectancy &gt; 75 AND capital &gt; 200 AND government_form = "Constitutional Monarchy"</string>
+		<string>SELECT countries.name, life_expectancy, capital FROM countries WHERE life_expectancy &gt; 75 AND capital &gt; 200</string>
+		<string>SELECT cities.name AS city, cities.population FROM countries
+LEFT JOIN cities ON countries.id = cities.country_id WHERE countries.name = "Mexico" AND cities.population &gt; 500000
+ORDER BY cities.population DESC</string>
+		<string>SELECT cities.name AS city, population FROM countries
+LEFT JOIN cities ON countries.id = cities.country_id WHERE countries.name = "Mexico" AND cities.population &gt; 500000
+ORDER BY cities.population DESC</string>
+		<string>SELECT cities.name AS city, cities.population AS citypop FROM countries
+LEFT JOIN cities ON countries.id = cities.country_id WHERE countries.name = "Mexico" AND cities.population &gt; 500000
+ORDER BY cities.population DESC</string>
+		<string>select * from cities</string>
+		<string>select * from countries</string>
+		<string>select * from countries
+
+SELECT cities.name AS city, cities.population FROM countries
+LEFT JOIN cities ON countries.id = cities.country_id WHERE countries.name = "Mexico" AND cities.population &gt; 500000
+ORDER BY cities.population DESC</string>
+		<string>SELECT * FROM countries
+LEFT JOIN cities ON countries.id = cities.country_id 
+ORDER BY cities.population DESC</string>
+		<string>SELECT * FROM countries
+LEFT JOIN cities ON countries.id = cities.country_id WHERE countries.name = "Mexico" AND cities.population &gt; 500000
+ORDER BY cities.population DESC</string>
+		<string>SELECT countries.name, surface_area, population FROM countries WHERE surface_area &lt; 501 AND population &gt; 100000</string>
+		<string>SELECT countries.name, countries.surface_area, countries.population FROM countries AS name, surface area, population WHERE countries.surface_area &lt; 501 AND countries.population &gt; 100000</string>
+		<string>SELECT countries.name AS country, languages.language, languages.percentage FROM countries 
+LEFT JOIN languages ON countries.id = languages.country_id WHERE languages.percentage &gt; 89
+ORDER BY languages.percentage DESC</string>
+		<string>SELECT countries.name, countries.surface_area, countries.population FROM countries AS name, surface area, population WHERE surface_area &lt; 501 AND population &gt; 100000</string>
+		<string>SELECT countries.name AS country, languages.language, languages.percentage FROM countries</string>
+		<string>SELECT countries.name, COUNT(cities.name) AS cities FROM countries
+LEFT JOIN cities ON countries.id = cities.country_id
+GROUP BY countries.name 
+ORDER BY COUNT(*) DESC</string>
+		<string>SELECT countries.name, COUNT(cities.name) AS cities FROM countries
+JOIN cities ON countries.id = cities.country_id
+GROUP BY countries.name 
+ORDER BY COUNT(*) DESC</string>
+		<string>SELECT cities.name AS city, cities.population FROM countries
+LEFT JOIN cities ON countries.id = cities.country_id WHERE countries.name = "Mexico" 
+AND cities.population &gt; 500000
+ORDER BY cities.population DESC</string>
+		<string>SELECT cities.name AS city, cities.population FROM countries
+LEFT JOIN cities ON countries.id = cities.country_id WHERE countries.name = "Mexico" 
+AND cities.population &lt; 500000
+ORDER BY cities.population DESC</string>
+		<string>SELECT countries.name, COUNT(cities.name) AS cities FROM countries
+JOIN cities ON countries.id = cities.country_id
+GROUP BY countries.name ORDER BY COUNT(*) DESC</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.19</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
